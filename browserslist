@@ -5,11 +5,13 @@
 # You can see what browsers were selected by your queries by running:
 #   npx browserslist
 
-> 1%
+> 1.0%
 last 2 versions
 Firefox ESR
 not dead
-not IE_Mob <= 11
 not IE <= 11
-not safari <= 12
+not IE_Mob <= 11
+not safari < 13
 not op_mini all
+not ios_saf < 13
+not samsung < 10
