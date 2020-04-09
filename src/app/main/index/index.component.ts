@@ -1,4 +1,42 @@
 import {Component, OnInit} from '@angular/core';
+import {Apollo} from 'apollo-angular';
+import {Observable} from 'rxjs';
+import gql from 'graphql-tag';
+
+const MainQuery = gql`
+  query categories {
+  categories {
+    _id
+    name
+    products {
+      _id
+      name
+      createdAt
+      image {
+        _id
+        contentUrl
+      }
+      offers {
+        _id
+        price
+        priceCurrency
+        availability
+      }
+    }
+  }
+}
+`;
+
+
+const TestMutation = gql`
+mutation testMutation {
+  createProduct(input: {name: "mut", category: "/categories/1"}) {
+    product {
+      _id
+    }
+  }
+}
+`;
 
 @Component({
     selector: 'app-index',
@@ -6,11 +44,12 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+    data$: Observable<any>;
 
-    constructor() {
+    constructor(private apollo: Apollo) {
     }
 
     ngOnInit() {
+        this.data$ = this.apollo.watchQuery({query: MainQuery}).valueChanges;
     }
-
 }

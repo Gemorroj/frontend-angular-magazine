@@ -18,7 +18,7 @@ export class AuthService {
     }
 
     login(credentials: { email: string, password: string }) {
-        return this.httpClient.post<{ token: string }>(`${environment.api_utl}/authentication_token`, credentials, {headers: this.headers})
+        return this.httpClient.post<{ token: string }>(`${environment.api_url}/authentication_token`, credentials, {headers: this.headers})
             .pipe(
                 tap(data => localStorage.setItem('token', data.token)),
                 catchError(AuthService.handleError),
