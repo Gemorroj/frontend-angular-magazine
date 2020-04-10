@@ -9,8 +9,9 @@ import {AuthModule} from "./auth/auth.module";
 import {AdminModule} from "./admin/admin.module";
 import {MainModule} from "./main/main.module";
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthInterceptor} from "./auth/auth.interceptor";
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,8 @@ import {AuthInterceptor} from "./auth/auth.interceptor";
         AdminModule,
         MainModule,
         MatToolbarModule,
+        GraphQLModule,
+        HttpClientModule,
     ],
     providers: [
         {
