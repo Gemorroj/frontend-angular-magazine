@@ -1,9 +1,24 @@
+<h3>Sign In</h3>
+
 <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-    <mat-form-field>
-        <input matInput type="email" formControlName="email" placeholder="Enter email" required/>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput type="password" formControlName="password" placeholder="Password" required/>
-    </mat-form-field>
-    <button type="submit" mat-button>Login</button>
+    <p-panel header="Validate">
+        <div class="p-fluid forms-grid">
+            <div>
+                <div>Email *</div>
+                <input pInputText type="email" formControlName="email" placeholder="Enter email" required />
+                <p-message severity="error" text="Email is required" *ngIf="loginForm.hasError('required', 'email') && loginForm.get('email').dirty"></p-message>
+                <p-message severity="error" text="Enter valid email" *ngIf="loginForm.hasError('email', 'email')&& loginForm.get('email').dirty"></p-message>
+            </div>
+
+            <div>
+                <div>Password *</div>
+                <input pInputText type="password" formControlName="password" placeholder="Password" required />
+                <p-message severity="error" text="Password is required" *ngIf="loginForm.hasError('required', 'password') && loginForm.get('password').dirty"></p-message>
+            </div>
+
+            <div>
+                <button pButton type="submit" label="Sign In" [disabled]="!loginForm.valid"></button>
+            </div>
+        </div>
+    </p-panel>
 </form>

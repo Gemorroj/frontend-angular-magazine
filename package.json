@@ -9,12 +9,10 @@
     "private": true,
     "dependencies": {
         "@angular/animations": "~9.1.9",
-        "@angular/cdk": "~9.2.4",
         "@angular/common": "~9.1.9",
         "@angular/compiler": "~9.1.9",
         "@angular/core": "~9.1.9",
         "@angular/forms": "~9.1.9",
-        "@angular/material": "~9.2.4",
         "@angular/platform-browser": "~9.1.9",
         "@angular/platform-browser-dynamic": "~9.1.9",
         "@angular/router": "~9.1.9",
@@ -25,6 +23,9 @@
         "apollo-link": "^1.2.14",
         "graphql": "^14.6.0",
         "graphql-tag": "^2.10.3",
+        "primeflex": "^1.1.1",
+        "primeicons": "^4.0.0-rc.2",
+        "primeng": "^9.1.0",
         "rxjs": "~6.5.5",
         "tslib": "^1.10.0",
         "zone.js": "~0.10.2"

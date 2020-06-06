@@ -1,21 +1,23 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {BrowserModule} from '@angular/platform-browser';
 import {LoginComponent} from './login/login.component';
-import {HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from "@angular/material/button";
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
+import {PanelModule} from 'primeng/panel';
+import {InputTextModule} from 'primeng/inputtext';
+import {MessageModule} from 'primeng/message';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
     declarations: [LoginComponent],
     imports: [
-        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
         HttpClientModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
+        FormsModule, ReactiveFormsModule,
+        PanelModule, InputTextModule, MessageModule, ButtonModule
     ]
 })
 export class AuthModule {
