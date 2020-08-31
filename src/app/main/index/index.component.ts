@@ -1,7 +1,8 @@
+import {Apollo, gql} from 'apollo-angular';
 import {Component, OnInit} from '@angular/core';
-import {Apollo} from 'apollo-angular';
+
 import {Observable} from 'rxjs';
-import gql from 'graphql-tag';
+
 
 const MainQuery = gql`
   query categories {
