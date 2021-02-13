@@ -23,6 +23,8 @@
         "allowSyntheticDefaultImports": true
     },
     "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "incremental": true,
         "fullTemplateTypeCheck": true,
         "strictInjectionParameters": true
     }

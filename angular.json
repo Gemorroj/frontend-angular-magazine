@@ -56,7 +56,7 @@
                         ],
                         "styles": [
                             "node_modules/primeicons/primeicons.css",
-                            "node_modules/primeng/resources/themes/nova-light/theme.css",
+                            "node_modules/primeng/resources/themes/nova/theme.css",
                             "node_modules/primeng/resources/primeng.css",
                             "node_modules/primeflex/primeflex.scss",
                             "src/styles.scss"
@@ -74,7 +74,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "extractLicenses": true,
                             "vendorChunk": false,
